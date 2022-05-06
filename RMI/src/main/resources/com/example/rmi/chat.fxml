@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="731.0" style="-fx-background-color: skyblue;" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rmi.ChatController">
+    <children>
+        <TextField fx:id="_message" layoutX="39.0" layoutY="459.0" prefHeight="54.0" prefWidth="372.0" style="-fx-background-radius: 30px; -fx-border-color: black; -fx-border-radius: 30px;" />
+        <Label layoutX="39.0" layoutY="432.0" prefHeight="19.0" prefWidth="156.0" text="Send a message :">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Label fx:id="_pseudoChat" layoutX="73.0" layoutY="28.0" style="-fx-font-style: italic; -fx-font-weight: bold;" text="Label" />
+      <Label fx:id="_clientHour" layoutX="319.0" layoutY="28.0" style="-fx-font-style: italic; -fx-font-weight: bold;" text="heureC" />
+      <Label fx:id="_serverHour" layoutX="545.0" layoutY="28.0" style="-fx-font-style: italic; -fx-font-weight: bold;" text="heureS" />
+      <ListView fx:id="_listMessages" layoutX="39.0" layoutY="92.0" prefHeight="320.0" prefWidth="372.0" />
+      <ListView fx:id="_connectedClients" layoutX="457.0" layoutY="93.0" prefHeight="320.0" prefWidth="205.0" />
+      <ImageView fitHeight="54.0" fitWidth="47.0" layoutX="488.0" layoutY="463.0" onMouseClicked="#sendButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/iconSend.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="585.0" layoutY="465.0" onMouseClicked="#logoutButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/iconDeconnexion.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="12.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/iconUser.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="231.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/iconTimeClient.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="467.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/iconTimeServer.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="458.0" layoutY="73.0" prefHeight="19.0" prefWidth="174.0" text="Connected clients :">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
